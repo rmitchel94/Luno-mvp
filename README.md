@@ -1,32 +1,45 @@
 # 🌙 Luno — Loyalty That Pays  
 *A universal rewards wallet that converts brand loyalty into real cash.*  
 
-![Luno Orbit Concept](docs/luno_orbit.png) <!-- replace with actual image later -->
-
 ---
 
 ## 🚀 Overview
 **Luno by Revu** is building a universal rewards wallet that transforms brand loyalty into real, spendable cash.  
-- Brands gain more engaged and loyal customers.  
-- Users unlock value from the subscriptions and purchases they already make.  
-- Families and groups can pool rewards for even greater returns.  
 
 ---
 
 ## ✨ Features (MVP)
-- **Rewards Calculator** — estimate your annual cash-back based on subscriptions.  
-- **Pooling Rewards** — simulate group/household pooling with bonuses.  
-- **Multi-Category Boosts** — get extra rewards for stacking multiple services in a category.  
-- **Dashboard** — placeholder for wallet total, orbit visualization, and partner directory.  
+- Rewards Calculator — estimate your annual cash-back based on subscriptions.  
+- Pooling Rewards — simulate group/household pooling with bonuses.  
+- Multi-Category Boosts — extra rewards for stacking services.  
+- Dashboard — placeholder for wallet total + orbit visualization.  
 
 ---
 
 ## 🛠️ Tech Stack
-- **Next.js 14** — frontend framework  
-- **Tailwind CSS** — modern styling  
-- **Supabase** — database + authentication  
-- **Node.js API routes** — server-side reward calculation  
+- Next.js 14  
+- Tailwind CSS  
+- Supabase (database + auth)  
+- Node.js API routes  
 
 ---
 
-## 📂 Project Structure
+## ⚡ Getting Started
+1. Clone the repo  
+2. `npm install`  
+3. Copy `.env.local` and add your Supabase credentials  
+4. Run `npm run dev` and open [http://localhost:3000](http://localhost:3000)  
+
+---
+
+## 🛣️ Roadmap
+- [x] Rewards calculator prototype  
+- [ ] Supabase Auth (magic link)  
+- [ ] Interactive Orbit UI (React + D3.js)  
+- [ ] Partner onboarding + affiliate tracking  
+- [ ] Wallet + payouts  
+
+---
+
+## 📜 License
+MIT License © 2025 Revu
