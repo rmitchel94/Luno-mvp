@@ -1,0 +1,32 @@
+# 🗄️ Supabase Setup for Luno MVP
+
+This guide explains how to set up and connect a **Supabase backend** for the Luno MVP app.
+
+---
+
+## 1. Create a Supabase Project
+1. Go to [supabase.com](https://supabase.com) → log in with GitHub.
+2. Click **New Project**.
+   - **Name**: `luno-mvp`
+   - **Region**: pick closest to you
+   - **Password**: choose a secure DB password (store this safely)
+3. Wait ~1–2 minutes while Supabase provisions your project.
+
+---
+
+## 2. Get Your Project Credentials
+1. In Supabase dashboard → **Project Settings → API**.
+2. Copy:
+   - **Project URL** → use as `NEXT_PUBLIC_SUPABASE_URL`
+   - **anon public key** → use as `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+These are the environment variables your app will need.
+
+---
+
+## 3. Add Environment Variables
+### Local Development
+Create a `.env.local` file in your project root:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
