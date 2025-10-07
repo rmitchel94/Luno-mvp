@@ -28,6 +28,24 @@ export default function Home() {
     setEstimate(data)
     setLoading(false)
   }
+async function saveToSupabase() {
+  const user_id = 'demo-user' // In future, this will come from Supabase Auth
+  const payload = { user_id, subscriptions: rows }
+
+  try {
+    const res = await fetch('/api/subscriptions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    const data = await res.json()
+    if (data.error) throw data.error
+    alert('Subscriptions saved to Supabase ✅')
+  } catch (err) {
+    console.error('Error saving data:', err)
+    alert('Error saving to Supabase ❌')
+  }
+}
 
   return (
     <div className="min-h-screen p-6">
@@ -51,6 +69,15 @@ export default function Home() {
           <span className="self-center text-gray-300">Members in pool</span>
           <button className="ml-auto px-4 py-2 bg-green-500 rounded" onClick={compute} disabled={loading}>{loading ? 'Calculating...' : 'Estimate'}</button>
         </div>
+{estimate && (
+  <button
+    onClick={saveToSupabase}
+    className="px-4 py-2 mb-3 bg-blue-600 hover:bg-blue-500 rounded text-white"
+  >
+    Save to Supabase
+  </button>
+)
+}
 
         {estimate && (
           <div className="bg-slate-800 p-4 rounded">
